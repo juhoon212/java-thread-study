@@ -11,7 +11,7 @@ public class ConsumerTask implements Runnable{
 
     @Override
     public void run() {
-        log("[초기 시도]     ? <-" + q);
+        log("[소비 시도]     ? <-" + q);
         String data = q.take();
         log("[소비 완료] " + data + " <- " + q);
     }
