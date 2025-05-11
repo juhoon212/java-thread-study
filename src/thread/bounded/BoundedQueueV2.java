@@ -19,7 +19,7 @@ public class BoundedQueueV2 implements BoundedQueue{
     public synchronized void put(String data) {
         while (q.size() == max) {
             log("[put] 큐가 가득 참, 생산자 대기");
-            sleep(1000);
+            sleep(1000); // 락 가지고 무한 반복
         }
         q.offer(data);
     }
