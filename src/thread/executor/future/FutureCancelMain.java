@@ -21,6 +21,7 @@ public class FutureCancelMain {
         log("future.cancel(" + mayInterruptIfRunning + ") 호출");
         // cancel(true) 면 취소 상태로 변경, interrupt를 호출해서 작업 중단
         // cacnel(false) 면 작업중인 task는 중단하지 않는다.
+        //
         final boolean cancelResult = future.cancel(mayInterruptIfRunning);
         log("cacnel(" + mayInterruptIfRunning + ") result : " + cancelResult);
 
